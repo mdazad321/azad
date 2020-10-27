@@ -128,7 +128,31 @@ section .title::after{
 .navbar.sticky .menu li a:hover{
     color: orangered;
 }
-
+nav.stroke ul li a{
+    position: relative;
+}
+nav.stroke ul li a:after{
+     position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #fff;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #fff;
+}
 /* menu btn styling */
 .menu-btn{
     color: #fff;
@@ -234,6 +258,7 @@ section .title::after{
     font-weight: 600;
     margin-bottom: 10px;
 }
+
 .about .about-content .right .text span{
     color: orangered;
 }
@@ -252,6 +277,7 @@ section .title::after{
     border: 2px solid orangered;
     transition: all 0.3s ease;
 }
+
 .about .about-content .right a:hover{
     color: orangered;
     background: none;
